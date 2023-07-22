@@ -1,7 +1,7 @@
 # mbaharip Portfolio
 
 <p align='center'>
-<img src='./public/img/banner.webp' alt='mbahArip' height=256 style='border-radius:8px'>
+<!-- <img src='./public/img/banner.webp' alt='mbahArip' height=256 style='border-radius:8px'> -->
 </p>
 
 Hello! I'm **Arief Rachmawan**, a **Developer** from **Bandung, Indonesia**. I'm currently a student at **Sekolah Tinggi Teknologi Bandung** pursuing a Bachelor's degree in Computer Science.
