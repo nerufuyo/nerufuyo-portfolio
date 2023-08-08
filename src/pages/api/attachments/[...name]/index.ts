@@ -16,9 +16,9 @@ export default async function handler(
 
   try {
     const { data } = await octokit.rest.repos.getContent({
-      owner: 'mbaharip',
+      owner: 'nerufuyo',
       path: `@attachments/${name?.join('/')}`,
-      repo: 'mbaharip-blog-posts',
+      repo: 'nerufuyo-blog-posts',
     });
 
     if ((data as any).type !== 'file') {

@@ -12,15 +12,6 @@ const navLinks: { name: ReactNode; href: string; target?: string }[] = [
     name: <span>Works / Projects</span>,
     href: '/works',
   },
-  {
-    name: (
-      <span className='flex w-fit items-center gap-2'>
-        <VscGithub size={18} /> Source Code
-      </span>
-    ),
-    href: 'https://github.com/mbahArip/mbaharip-portfolio',
-    target: '_blank',
-  },
 ];
 
 export default function Navbar() {
@@ -37,16 +28,16 @@ export default function Navbar() {
         >
           <img
             src='/logo.svg'
-            alt='mbaharip'
+            alt='nerufuyo'
             className='w-8 h-8'
           />
           <span className='font-bold text-xl hidden md:block font-heading'>
-            mbahArip
+            nerufuyo
           </span>
         </Link>
 
         <span className='block md:hidden font-bold text-xl font-heading'>
-          mbahArip
+          nerufuyo
         </span>
 
         <div className='flex items-center justify-center md:hidden relative w-8 h-8'>

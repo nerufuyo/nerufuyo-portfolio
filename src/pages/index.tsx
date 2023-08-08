@@ -1,7 +1,9 @@
 import { NextSeo, NextSeoProps } from 'next-seo';
 import Link from 'next/link';
 import {
-  SiNextdotjs,
+  SiDart,
+  SiFlutter,
+  SiJavascript,
   SiReact,
   SiTailwindcss,
   SiTypescript,
@@ -36,18 +38,18 @@ const experiences: {
   {
     dateFrom: 'Aug 2021',
     dateTo: 'Jan 2022',
-    place: 'Kampus Merdeka with Agate Academy',
-    placeUrl: 'https://academy.agate.id/',
+    place: 'Kampus Merdeka with Dicoding Batch 1',
+    placeUrl: 'https://www.dicoding.com/',
     description: 'Study Independent',
-    role: '3D Artist',
+    role: 'Fullstack Developer',
   },
   {
     dateFrom: 'Feb 2022',
     dateTo: 'Jul 2022',
-    place: 'Kampus Merdeka with Alterra Academy',
-    placeUrl: 'https://academy.alterra.id/',
+    place: 'Kampus Merdeka with Dicoding Batch 2',
+    placeUrl: 'https://www.dicoding.com/',
     description: 'Study Independent',
-    role: 'Front-end Developer',
+    role: 'Multiplatform Mobile Developer',
   },
   {
     dateFrom: 'Oct 2022',
@@ -55,7 +57,15 @@ const experiences: {
     place: 'Legal Documentation and Information Network Bandung City',
     placeUrl: 'https://jdih.bandung.go.id/',
     description: 'Internship',
-    role: 'Full-stack Developer',
+    role: 'Mobile Developer',
+  },
+  {
+    dateFrom: 'Jul 2023',
+    dateTo: 'Current',
+    place: 'AA Solution PT. Bukharindo Makmur Sejahtera',
+    placeUrl: 'https://aatech-solution.com/',
+    description: 'Full Time',
+    role: 'Mobile Developer',
   },
 ];
 
@@ -118,25 +128,18 @@ export default function Home({ user, blogs, works, socials }: Props) {
               My preferred tech-stack includes: <br />
               <div className='flex w-full flex-wrap items-center gap-4'>
                 <span className='inline-flex h-fit w-fit items-center gap-2 font-bold'>
-                  <SiReact
+                  <SiDart
                     size={18}
                     className='text-blue-400'
                   />
-                  React
+                  Dart
                 </span>
                 <span className='inline-flex h-fit w-fit items-center gap-2 font-bold'>
-                  <SiNextdotjs
+                  <SiFlutter
                     size={18}
                     className='text-zinc-50'
                   />
-                  Next
-                </span>
-                <span className='inline-flex h-fit w-fit items-center gap-2 font-bold'>
-                  <SiTailwindcss
-                    size={18}
-                    className='text-cyan-300'
-                  />
-                  Tailwind
+                  Flutter
                 </span>
                 <span className='inline-flex h-fit w-fit items-center gap-2 font-bold'>
                   <SiTypescript
@@ -144,6 +147,13 @@ export default function Home({ user, blogs, works, socials }: Props) {
                     className='text-blue-500'
                   />
                   Typescript
+                </span>
+                <span className='inline-flex h-fit w-fit items-center gap-2 font-bold'>
+                  <SiReact
+                    size={18}
+                    className='text-blue-500'
+                  />
+                  React
                 </span>
               </div>
             </div>
@@ -197,7 +207,9 @@ export default function Home({ user, blogs, works, socials }: Props) {
 
             <span className='my-4'>
               Or send me an email at{' '}
-              <a href='mailto:me@mbaharip.com'>me@mbaharip.com</a>
+              <a href='mailto:listyoap.work@gmail.com'>
+                listyoap.work@gmail.com
+              </a>
             </span>
           </div>
         </section>
@@ -255,11 +267,11 @@ export default function Home({ user, blogs, works, socials }: Props) {
 }
 
 export async function getServerSideProps() {
-  const fetchUser = fetch('https://api.github.com/users/mbaharip', {
+  const fetchUser = fetch('https://api.github.com/users/nerufuyo', {
     headers: ghHeader,
   });
   const fetchSocials = fetch(
-    'https://api.github.com/users/mbaharip/social_accounts',
+    'https://api.github.com/users/nerufuyo/social_accounts',
     {
       headers: ghHeader,
     },

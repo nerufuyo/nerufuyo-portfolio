@@ -1,21 +1,26 @@
 import Link from 'next/link';
-import { SiGithub, SiGmail, SiTwitter } from 'react-icons/si';
+import { SiGithub, SiGmail, SiLinkedin, SiTwitter } from 'react-icons/si';
 
 const links: { title: string; href: string; icon: JSX.Element }[] = [
   {
     title: 'Email',
-    href: 'mailto:me@mbaharip.com',
+    href: 'mailto:listyoap.work@gmail.com',
     icon: <SiGmail size={24} />,
   },
   {
     title: 'Github',
-    href: 'https://github.com/mbaharip',
+    href: 'https://github.com/nerufuyo',
     icon: <SiGithub size={24} />,
   },
   {
     title: 'Twitter',
-    href: 'https://twitter.com/mbaharip_',
+    href: 'https://twitter.com/nerufuyo',
     icon: <SiTwitter size={24} />,
+  },
+  {
+    title: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/listyo-adi-pamungkas/',
+    icon: <SiLinkedin size={24} />,
   },
 ];
 
@@ -34,7 +39,7 @@ export default function Footer() {
           </Link>
         ))}
       </div>
-      <span>&copy; {new Date().getFullYear()}・mbaharip</span>
+      <span>&copy; {new Date().getFullYear()}・nerufuyo</span>
       <span>
         Powered by{' '}
         <Link

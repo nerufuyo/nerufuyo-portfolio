@@ -36,7 +36,7 @@ export default async function handler(
     let imgBuffer: Buffer | undefined;
     if (type === 'attachments') {
       const attachmentUrl = new URL(
-        `/mbahArip/mbaharip-blog-posts/master/${urlQuery}`,
+        `/nerufuyo/nerufuyo-blog-posts/master/${urlQuery}`,
         'https://raw.githubusercontent.com',
       );
       const res = await fetch(attachmentUrl).then((res) => res.arrayBuffer());

@@ -324,7 +324,7 @@ export default function PostContent({ post, toc, nextPost, prevPost }: Props) {
         key={post.metadata.title}
       >
         <Giscus
-          repo='mbaharip/mbaharip-blog-posts'
+          repo='nerufuyo/nerufuyo-blog-posts'
           repoId='R_kgDOJ5ghvQ'
           category='Comments'
           categoryId='DIC_kwDOJ5ghvc4CX03d'

@@ -16,8 +16,8 @@ export default async function handler(
 
   try {
     const { data } = (await octokit.rest.repos.getContent({
-      owner: 'mbaharip',
-      repo: 'mbaharip-blog-posts',
+      owner: 'nerufuyo',
+      repo: 'nerufuyo-blog-posts',
       path: 'settings.md',
     })) as Partial<{ data: GithubFile }>;
 

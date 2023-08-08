@@ -79,9 +79,9 @@ export async function getStaticProps(context: GetStaticPropsContext) {
   if (!fileName) return { notFound: true };
 
   const { data } = (await octokit.rest.repos.getContent({
-    owner: 'mbaharip',
+    owner: 'nerufuyo',
     path: `blogs/${fileName}.md`,
-    repo: 'mbaharip-blog-posts',
+    repo: 'nerufuyo-blog-posts',
   })) as Partial<{ data: GithubFile }>;
 
   if (!data) return { notFound: true };
@@ -164,9 +164,9 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
   // Get next and previous post
   const { data: blogsIndex } = (await octokit.rest.repos.getContent({
-    owner: 'mbaharip',
+    owner: 'nerufuyo',
     path: '@db/blogsIndex.json',
-    repo: 'mbaharip-blog-posts',
+    repo: 'nerufuyo-blog-posts',
   })) as Partial<{ data: GithubFile }>;
 
   if (!blogsIndex) return { notFound: true };
@@ -196,9 +196,9 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
 export async function getStaticPaths() {
   const { data } = (await octokit.rest.repos.getContent({
-    owner: 'mbaharip',
+    owner: 'nerufuyo',
     path: '@db/blogsIndex.json',
-    repo: 'mbaharip-blog-posts',
+    repo: 'nerufuyo-blog-posts',
   })) as Partial<{ data: GithubFile }>;
 
   if (!data) return { notFound: true };

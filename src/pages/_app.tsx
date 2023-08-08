@@ -29,16 +29,16 @@ const jetbrainsMono = JetBrains_Mono({
 
 export default function App({ Component, pageProps }: AppProps) {
   const defaultSeo: DefaultSeoProps = {
-    titleTemplate: '%s | mbahArip',
-    defaultTitle: 'mbahArip',
-    description: `Hello, I&apos;m Arief Rachmawan, a developer based in Bandung, Indonesia.`,
+    titleTemplate: '%s | nerufuyo',
+    defaultTitle: 'nerufuyo',
+    description: `Hello, I&apos;m Listyo Adi, a developer based in Bandung, Indonesia.`,
     canonical: process.env.NEXT_PUBLIC_SITE_URL,
     themeColor: '#000000',
     openGraph: {
       url: process.env.NEXT_PUBLIC_SITE_URL,
-      title: 'mbahArip',
+      title: 'nerufuyo',
       type: 'website',
-      description: `Hello, I&apos;m Arief Rachmawan, a developer based in Bandung, Indonesia.`,
+      description: `Hello, I&apos;m Listyo Adi, a developer based in Bandung, Indonesia.`,
       images: [
         {
           url: `${process.env.NEXT_PUBLIC_SITE_URL}/img/banner.webp`,
@@ -46,12 +46,12 @@ export default function App({ Component, pageProps }: AppProps) {
           height: 630,
         },
       ],
-      siteName: 'mbahArip',
+      siteName: 'nerufuyo',
     },
     twitter: {
       cardType: 'summary_large_image',
-      handle: '@mbahArip_',
-      site: '@mbahArip_',
+      handle: '@nerufuyo',
+      site: '@nerufuyo',
     },
     facebook: {
       appId: process.env.NEXT_PUBLIC_FACEBOOK_APP_ID as string,
@@ -59,11 +59,11 @@ export default function App({ Component, pageProps }: AppProps) {
     additionalMetaTags: [
       {
         name: 'twitter:title',
-        content: 'mbahArip',
+        content: 'nerufuyo',
       },
       {
         name: 'twitter:description',
-        content: `Hello, I&apos;m Arief Rachmawan, a developer based in Bandung, Indonesia.`,
+        content: `Hello, I&apos;m Listyo Adi, a developer based in Bandung, Indonesia.`,
       },
       {
         name: 'twitter:image',

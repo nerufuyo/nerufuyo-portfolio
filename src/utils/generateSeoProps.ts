@@ -26,7 +26,7 @@ export default function generateSeoProps({
     title: title,
     description:
       description ??
-      `Hello, I'm Arief Rachmawan, a developer based in Bandung, Indonesia.`,
+      `Hello, I'm Listyo Adi, a developer based in Bandung, Indonesia.`,
     canonical: url
       ? `${process.env.NEXT_PUBLIC_SITE_URL}${url}`
       : process.env.NEXT_PUBLIC_SITE_URL,
@@ -35,11 +35,11 @@ export default function generateSeoProps({
       url: url
         ? `${process.env.NEXT_PUBLIC_SITE_URL}${url}`
         : process.env.NEXT_PUBLIC_SITE_URL,
-      title: title ? `${title} | mbahArip` : 'mbahArip',
+      title: title ? `${title} | nerufuyo` : 'nerufuyo',
       type: type ?? 'website',
       description:
         description ??
-        `Hello, I&apos;m Arief Rachmawan, a developer based in Bandung, Indonesia.`,
+        `Hello, I&apos;m Listyo Adi, a developer based in Bandung, Indonesia.`,
       images: images
         ? [
             ...images,
@@ -56,13 +56,13 @@ export default function generateSeoProps({
               height: 630,
             },
           ],
-      siteName: 'mbahArip',
+      siteName: 'nerufuyo',
       article: article ?? undefined,
     },
     twitter: {
       cardType: 'summary_large_image',
-      handle: '@mbahArip_',
-      site: '@mbahArip_',
+      handle: '@nerufuyo',
+      site: '@nerufuyo',
     },
     facebook: {
       appId: process.env.NEXT_PUBLIC_FACEBOOK_APP_ID as string,
@@ -70,13 +70,13 @@ export default function generateSeoProps({
     additionalMetaTags: [
       {
         name: 'twitter:title',
-        content: title ? `${title} | mbahArip` : 'mbahArip',
+        content: title ? `${title} | nerufuyo` : 'nerufuyo',
       },
       {
         name: 'twitter:description',
         content:
           description ??
-          `Hello, I&apos;m Arief Rachmawan, a developer based in Bandung, Indonesia.`,
+          `Hello, I&apos;m Listyo Adi, a developer based in Bandung, Indonesia.`,
       },
       {
         name: 'twitter:image',

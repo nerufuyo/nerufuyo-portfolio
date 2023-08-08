@@ -15,9 +15,9 @@ export default async function handler(
 
   try {
     const { data } = await octokit.rest.repos.getContent({
-      owner: 'mbaharip',
+      owner: 'nerufuyo',
       path: '@attachments',
-      repo: 'mbaharip-blog-posts',
+      repo: 'nerufuyo-blog-posts',
     });
 
     if (!Array.isArray(data)) {

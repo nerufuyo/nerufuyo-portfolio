@@ -22,9 +22,9 @@ export default async function handler(
     const query = req.query.q as string;
 
     const { data } = (await octokit.rest.repos.getContent({
-      owner: 'mbaharip',
+      owner: 'nerufuyo',
       path: '@db/worksIndex.json',
-      repo: 'mbaharip-blog-posts',
+      repo: 'nerufuyo-blog-posts',
     })) as Partial<{ data: GithubFile }>;
 
     if (!data) {
