@@ -92,7 +92,7 @@ export default function PostContent({ post, toc, nextPost, prevPost }: Props) {
                 target='_blank'
                 className='w-full text-start text-sm'
               >
-                {post.metadata.repositoryUrl}
+                Open in new dimension
               </Link>
             </div>
           ) : (
@@ -106,7 +106,7 @@ export default function PostContent({ post, toc, nextPost, prevPost }: Props) {
                 target='_blank'
                 className='w-full text-start text-sm'
               >
-                {post.metadata.demoUrl}
+                Open in new dimension
               </Link>
             </div>
           ) : (
@@ -325,9 +325,9 @@ export default function PostContent({ post, toc, nextPost, prevPost }: Props) {
       >
         <Giscus
           repo='nerufuyo/nerufuyo-blog-posts'
-          repoId='R_kgDOJ5ghvQ'
-          category='Comments'
-          categoryId='DIC_kwDOJ5ghvc4CX03d'
+          repoId='R_kgDOKEwyqw'
+          category='General'
+          categoryId='DIC_kwDOKEwyq84CYcP2'
           mapping='pathname'
           strict='0'
           reactionsEnabled='1'

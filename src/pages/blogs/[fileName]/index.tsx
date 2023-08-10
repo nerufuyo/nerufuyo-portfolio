@@ -35,7 +35,7 @@ export default function PageBlog({ blog, toc, nextPost, prevPost }: Props) {
       tags: blog.metadata.tags,
       publishedTime: new Date(blog.metadata.createdAt).toISOString(),
       modifiedTime: new Date(blog.metadata.updatedAt).toISOString(),
-      authors: ['Arief Rachmawan'],
+      authors: ['Listyo Adi'],
     },
   });
 
@@ -54,7 +54,7 @@ export default function PageBlog({ blog, toc, nextPost, prevPost }: Props) {
         ]}
         datePublished={new Date(blog.metadata.createdAt).toISOString()}
         dateModified={new Date(blog.metadata.updatedAt).toISOString()}
-        authorName={['Arief Rachmawan']}
+        authorName={['Listyo Adi']}
         description={blog.metadata.summary}
       />
       <article>
@@ -122,9 +122,15 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     };
   });
 
+  let tempTags = markdownData.data.tags;
+  if (typeof tempTags === 'string') {
+    tempTags = markdownData.data.tags
+      .split(',')
+      .map((tag: String) => tag.trim());
+  }
   let tags = [];
-  if (Array.isArray(markdownData.data.tags) && markdownData.data.tags[0]) {
-    tags = markdownData.data.tags;
+  if (Array.isArray(tempTags) && tempTags.length > 0) {
+    tags = tempTags;
   }
 
   const summary = markdownContent

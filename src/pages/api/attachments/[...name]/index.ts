@@ -26,7 +26,7 @@ export default async function handler(
     }
 
     // Check if size is greater than vercel response limit
-    if ((data as any).size > 1024 * 1024 * 4) {
+    if ((data as any).size > 1024 * 1024 * 4 || !(data as any).content) {
       return res.status(307).redirect((data as any).download_url);
     }
 

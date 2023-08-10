@@ -93,6 +93,7 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
   const rawContent = Buffer.from(data.content, 'base64').toString('utf-8');
   const markdownData = matter(rawContent);
+  console.log(markdownData);
   let markdownContent = markdownData.content;
 
   if (markdownContent.startsWith('\n')) {
@@ -126,9 +127,15 @@ export async function getStaticProps(context: GetStaticPropsContext) {
     };
   });
 
+  let tempTags = markdownData.data.tags;
+  if (typeof tempTags === 'string') {
+    tempTags = markdownData.data.tags
+      .split(',')
+      .map((tag: String) => tag.trim());
+  }
   let tags = [];
-  if (Array.isArray(markdownData.data.tags) && markdownData.data.tags[0]) {
-    tags = markdownData.data.tags;
+  if (Array.isArray(tempTags) && tempTags.length > 0) {
+    tags = tempTags;
   }
 
   const summary = markdownContent
